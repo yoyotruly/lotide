@@ -11,12 +11,12 @@ const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   if (!arr1.length && !arr2.length) return true;
   
-  let result = false;
+  let isEqual = false;
   for (let i = 0; i < arr1.length; i++) {
-    result = (arr1[i] === arr2[i]);
+    isEqual = (arr1[i] === arr2[i]);
   }
 
-  return result;
+  return isEqual;
 };
 
 
