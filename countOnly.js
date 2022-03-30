@@ -19,6 +19,8 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 };
 
+
+// test case
 const firstNames = [
   "Karl",
   "Salima",
@@ -30,8 +32,6 @@ const firstNames = [
   "Fang",
   "Joe"
 ];
-
-// countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
