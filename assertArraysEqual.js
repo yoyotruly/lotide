@@ -11,9 +11,9 @@ const eqArrays = function(arr1, arr2) {
 };
 
 
-const assertArraysEqual = function(arr1, arr2) {
-  const failMsg = `🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`;
-  const passMsg = `✅✅✅ Assertion Passed: ${arr1} === ${arr2}`;
+const assertArraysEqual = function(actual, expected) {
+  const failMsg = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
+  const passMsg = `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
 
-  eqArrays(arr1, arr2) ? console.log(passMsg) : console.log(failMsg);
+  eqArrays(actual, expected) ? console.log(passMsg) : console.log(failMsg);
 };
