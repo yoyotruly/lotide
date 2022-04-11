@@ -1,20 +1,30 @@
-const assertEqual = require("../assertEqual");
+const { expect } = require("chai");
+
 const tail = require("../tail");
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
 
-// Test Case 2
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+describe("#tail()", () => {
 
-//Test Case 3
-const test3 = tail([]);
-assertEqual(test3.length, 0);
+  it("should return ['there', 'world'] when passed ['hello', 'there', 'world'] without modifying the input array", () => {
+    const input = ["Hello", "there", "world"];
+    const expectedOutput = ["there", "world"];
 
-//Test Case 4
-const test4 = tail([1]);
-assertEqual(test4.length, 0);
+    expect(tail(input)).to.deep.equal(expectedOutput);
+    expect(input).to.deep.equal(input);
+  });
+
+  it("should return [] when passed []", () => {
+    const input = [];
+    const expectedOutput = [];
+
+    expect(tail(input)).to.deep.equal(expectedOutput);
+  });
+
+  it("should return [] when passed [1]", () => {
+    const input = [1];
+    const expectedOutput = [];
+
+    expect(tail(input)).to.deep.equal(expectedOutput);
+  });
+
+});
