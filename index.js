@@ -34,6 +34,5 @@ module.exports = {
   findKeyByValue,
   findKey,
   map,
-  takeUntil,
-  assertEqual,
+  takeUntil
 };
