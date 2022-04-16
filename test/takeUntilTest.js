@@ -1,6 +1,17 @@
-// test cases
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]);
+const { expect } = require("chai");
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-assertArraysEqual(takeUntil(data2, x => x === ','), ["I've", "been", "to", "Hollywood"]);
+const takeUntil = require("../takeUntil");
+
+describe("takeUntil()", () => {
+
+  it("should return [1, 2] when passed [1, 2, -3, 4, -5] and callback x => x < 0", () => {
+    expect(takeUntil([1, 2, -3, 4, -5], x => x < 0))
+      .to.deep.equal([1, 2]);
+  });
+
+  it("should return ['hello', 'world'] when passed ['hello', 'world', '!'] and callback x => x === '!'", () => {
+    expect(takeUntil(["hello", "world", "!"], x => x === "!"))
+      .to.deep.equal(["hello", "world"]);
+  });
+
+});

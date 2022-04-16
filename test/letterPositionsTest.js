@@ -1,8 +1,12 @@
-// test case
-const test1 = letterPositions("big dog");
+const { expect } = require("chai");
 
-assertArraysEqual(test1["b"], [0]);
-assertArraysEqual(test1["i"], [1]);
-assertArraysEqual(test1["g"], [2, 6]);
-assertArraysEqual(test1["d"], [4]);
-assertArraysEqual(test1["o"], [5]);
+const letterPositions = require("../letterPositions");
+
+describe("letterPositions()", () => {
+
+  it("should return { a: [0, 2, 4], b: [1] } when passed 'aba a'", () => {
+    expect(letterPositions("aba a"))
+      .to.deep.equal({ a: [0, 2, 4], b: [1] });
+  });
+
+});

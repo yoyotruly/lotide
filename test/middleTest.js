@@ -2,7 +2,6 @@ const { expect } = require("chai");
 
 const middle = require("../middle");
 
-
 describe("middle()", () => {
 
   it("should return [] when passed [1]", () => {

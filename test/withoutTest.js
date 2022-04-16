@@ -1,11 +1,18 @@
-// test case 1
-const testArr1 = [1, 2, 3];
-const testResult1 = without(testArr1, [1, 2]);
-assertArraysEqual(testResult1, [3]);
-assertArraysEqual(testArr1, [1, 2, 3]);
+const { expect } = require("chai");
 
-// test case 2
-const testArr2 = ["Harry", "Potter", 3];
-const testResult2 = without(testArr2, ["Potter", 2]);
-assertArraysEqual(testResult2, ["Harry", 3]);
-assertArraysEqual(testArr2, ["Harry", "Potter", 3]);
+const without = require("../without");
+
+describe("without()", () => {
+
+  it("should return [3] when passed [1, 2, 3] and [1, 2]", () => {
+    const input = [1, 2, 3];
+    const itemsToRemove = [1, 2];
+
+    expect(without(input, itemsToRemove))
+      .to.deep.equal([3]);
+
+    expect(input)
+      .to.deep.equal(input);
+  });
+
+});

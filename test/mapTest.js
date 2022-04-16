@@ -1,3 +1,12 @@
-// test case
-const words = ["ground", "control", "to", "major", "tom"];
-assertArraysEqual(map(words, word => word[0]), ["g", "c", "t", "m", "t"]);
+const { expect } = require("chai");
+
+const map = require("../map");
+
+describe("map()", () => {
+  
+  it("should return ['b', 'd'] when passed ['big', 'dog'] and callback x => x[0]", () => {
+    expect(map(["big", "dog"], x => x[0]))
+      .to.deep.equal(["b", "d"]);
+  });
+
+});
