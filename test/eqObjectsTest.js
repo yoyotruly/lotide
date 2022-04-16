@@ -1,19 +1,31 @@
-// test cases - primitive types as values
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-const abc = { a: "1", b: "2", c: "3"};
-const abc2 = { a: "1", b: "3", c: "3"};
+const { expect } = require("chai");
 
-assertEqual(eqObjects(ab, ba), true);
-assertEqual(eqObjects(ab, abc), false);
-assertEqual(eqObjects(abc, abc2), false);
+const eqObjects = require("../eqObjects");
 
-// test cases - arrays as values
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-const cd2 = { c: "1", d: ["2", 3, 4] };
-const cd3 = { c: ["1"], d: ["2", 3] };
+describe("eqObjects()", () => {
+  
+  it("should return true when passed { a: 1, b: 2 } and { b: 2, a: 1 }", () => {
+    const object1 = { a: 1, b: 2 };
+    const object2 = { b: 2, a: 1 };
 
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
-assertEqual(eqObjects(cd, cd3), false);
+    expect(eqObjects(object1, object2))
+      .to.be.true;
+  });
+
+  it("should return true when passed { a: 1, b: [2, 3] } and { b: [2, 3], a: 1 }", () => {
+    const object1 = { a: 1, b: [2, 3] };
+    const object2 = { b: [2, 3], a: 1 };
+
+    expect(eqObjects(object1, object2))
+      .to.be.true;
+  });
+
+  it("should return false when passed { a: 1, b: [2, 3] } and { b: '3', a: 1 }", () => {
+    const object1 = { a: 1, b: [2, 3] };
+    const object2 = { b: "3", a: 1 };
+
+    expect(eqObjects(object1, object2))
+      .to.be.false;
+  });
+
+});
