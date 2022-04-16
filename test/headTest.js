@@ -2,7 +2,6 @@ const { expect } = require("chai");
 
 const head = require("../head");
 
-
 describe("head()", () => {
 
   it("should return 1 when passed [1, 2, 3]", () => {

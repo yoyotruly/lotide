@@ -3,7 +3,7 @@ const { expect } = require("chai");
 const tail = require("../tail");
 
 
-describe("#tail()", () => {
+describe("tail()", () => {
 
   it("should return ['there', 'world'] when passed ['hello', 'there', 'world'] without modifying the input array", () => {
     const input = ["Hello", "there", "world"];

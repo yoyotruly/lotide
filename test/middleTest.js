@@ -3,7 +3,7 @@ const { expect } = require("chai");
 const middle = require("../middle");
 
 
-describe("#middle()", () => {
+describe("middle()", () => {
 
   it("should return [] when passed [1]", () => {
     const input = [1];
@@ -31,6 +31,6 @@ describe("#middle()", () => {
     const expectedOutput = [3, 4];
 
     expect(middle(input)).to.deep.equal(expectedOutput);
-  })
+  });
 
 });
