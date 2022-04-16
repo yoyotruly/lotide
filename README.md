@@ -26,38 +26,37 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-TODO: fill descriptions
 * `assertEqual`  
-  description
+  Tests for equality between two values of primitive types and prints out a colorful message to inform if the assertion passes or fails.
 * `assertArraysEqual`  
-  description
+  Tests for equality between two arrays and prints out a colorful message to inform if the assertion passes or fails.
 * `assertObjectsEqual`  
-  description
+  Tests for equality between two objects and prints out a colorful message to inform if the assertion passes or fails.
 * `eqArrays`  
-  description
+  Takes in two arrays and returns true or false based on a perfect match.
 * `eqObjects`  
-  description
+  Takes in two objects and returns true or false based on a perfect match.
 * `countLetters`  
-  description
+  Given a string, returns an object containing counts of each of the letters in that string.
 * `countOnly`  
-  description
+  Given an array and an object, returns an object containing counts of everything that an input object listed.
 * `findKey`  
-  description
+  Given an object and a callback function, returns the first key for which the callback returns a truthy value. If no key is found, returns undefined.
 * `findKeyByValue`  
-  description
+  Given an object and a value, returns the first key which contains the given value. Returns undefined if no key with that value is found.
 * `flatten`  
-  description
+  Flattens a nested array into a single-level array.
 * `head`  
-  description
+  Retrieves the first element from an array.
 * `letterPositions`  
-  description
+  Returns all the indices in a string where each character is found.
 * `map`  
-  description
+  Returns a new array based on the results of the callback function on every element of the given array.
 * `middle`  
-  description
+  Retrieves the middle-most element(s) of an array.
 * `tail`  
-  description
+  Retrieves every element except the first element (head) of the array.
 * `takeUntil`  
-  description
+  Returns a slice of the given array with elements taken from the beginning. Elements are taken until the callback returns a truthy value.
 * `without`  
-  description
+  Returns a subset of an array with unwanted elements removed.
