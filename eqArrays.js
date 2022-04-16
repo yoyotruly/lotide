@@ -4,13 +4,14 @@
  * @param {Array} array2 The second array to compare
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  * @example
- *  * eqArrays([1, 2], [1, 2])
+ *
+ * _.eqArrays([1, 2], [1, 2])
  * // => true
  *
- *  * eq([1, 2], [1, "2"])
+ * _.eqArrays([1, 2], [1, "2"])
  * // => false
  *
- *  * eqArrays([], [])
+ * _.eqArrays([], [])
  * // => true
  */
 const eqArrays = function(array1, array2) {
