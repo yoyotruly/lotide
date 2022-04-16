@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@yoyotruly/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of the Lodash library",
   "main": "",
   "scripts": {
     "test": "mocha"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/yoyotruly/lotide.git"
   },
-  "author": "",
+  "author": "Yoyo Yang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yoyotruly/lotide/issues"
