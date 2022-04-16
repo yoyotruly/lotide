@@ -1,8 +1,15 @@
-// test case
-const test1 = countLetters("big dog");
-assertEqual(test1["b"], 1);
-assertEqual(test1["i"], 1);
-assertEqual(test1["g"], 2);
-assertEqual(test1["d"], 1);
-assertEqual(test1["o"], 1);
-assertEqual(test1[" "], undefined);
+const { expect } = require("chai");
+
+const countLetters = require("../countLetters");
+
+describe("countLetters()", () => {
+
+  it("should return { a: 3, b: 1 } when passed 'aba a'", () => {
+    const input = "aba a";
+    const expectedOutput = { a: 3, b: 1 };
+
+    expect(countLetters(input))
+      .to.deep.equal(expectedOutput);
+  });
+
+});
