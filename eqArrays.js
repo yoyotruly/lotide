@@ -5,13 +5,13 @@
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  * @example
  *
- * _.eqArrays([1, 2], [1, 2])
+ * _.eqArrays([1, 2], [1, 2]);
  * // => true
  *
- * _.eqArrays([1, 2], [1, "2"])
+ * _.eqArrays([1, 2], [1, "2"]);
  * // => false
  *
- * _.eqArrays([], [])
+ * _.eqArrays([], []);
  * // => true
  */
 const eqArrays = function(array1, array2) {
