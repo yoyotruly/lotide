@@ -7,7 +7,7 @@ describe("head()", () => {
 
   it("should return 1 when passed [1, 2, 3]", () => {
     const input = [1, 2, 3];
-    const expectedOutput = 1
+    const expectedOutput = 1;
 
     expect(head(input)).to.equal(expectedOutput);
   });
@@ -21,7 +21,7 @@ describe("head()", () => {
 
   it("should return 5 when passed [5]", () => {
     const input = [5];
-    const expectedOutput = 5
+    const expectedOutput = 5;
 
     expect(head(input)).to.equal(expectedOutput);
   });
@@ -31,6 +31,6 @@ describe("head()", () => {
     const expectedOutput = undefined;
 
     expect(head(input)).to.equal(expectedOutput);
-  })
+  });
 
 });
