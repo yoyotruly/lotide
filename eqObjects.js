@@ -29,12 +29,12 @@ const eqObjects = function(object1, object2) {
   if (!eqArrays(keys1, keys2)) return false;
   
   return keys1.every(key => {
-    const val1 = object1[key];
-    const val2 = object2[key];
+    const value1 = object1[key];
+    const value2 = object2[key];
 
-    return Array.isArray(val1) && Array.isArray(val2) ?
-      eqArrays(val1, val2) :
-      val1 === val2;
+    return Array.isArray(value1) && Array.isArray(value2) ?
+      eqArrays(value1, value2) :
+      value1 === value2;
   });
 };
 
