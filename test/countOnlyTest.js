@@ -1,19 +1,16 @@
-// test case
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
+const { expect } = require("chai");
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+const countOnly = require("../countOnly");
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+describe("countOnly()", () => {
+
+  it("should return { linda: 2, gene: 1 } when passed ['bob', 'linda', 'gene', 'linda'] and { linda: true, gene: true }", () => {
+    const names = ["bob", "linda", "gene", "linda"];
+    const condition = { linda: true, gene: true };
+    const expectedOutput = { linda: 2, gene: 1 };
+
+    expect(countOnly(names, condition))
+      .to.deep.equal(expectedOutput);
+  });
+
+});
